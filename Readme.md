@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Семен Мишин](https://up.htmlacademy.ru/htmlcss/33/user/1933587).
-* Наставник: `Неизвестно`.
+* Наставник: [Arthur Litovko](https://github.com/baileys-li).
 
 ---
 
