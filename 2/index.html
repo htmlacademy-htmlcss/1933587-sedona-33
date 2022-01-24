@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <base href="https://htmlacademy-htmlcss.github.io/1933587-sedona-33/2/">
+  <base href="https://htmlacademy-htmlcss.github.io/1933587-sedona-33/2/">
 </head>
   <body>
     <!--Header-->
@@ -14,16 +14,16 @@
         <a href="index.html">
           <img src="" alt="Логотип Седоны">
         </a>
-        <!--Основная навигация по сайту-->
-        <ul class="navigation-list">
+
+        <ul class="navigation-list" aria-label="Основная навигация">
           <li class="navigation-item active">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиница</a>
+            <a class="navigation-link" href="catalag.html">Гостиница</a>
           </li>
         </ul>
         <!--Дополнительная навигация-->
@@ -47,94 +47,92 @@
     </header>
     <!--Основное содержание стр-->
     <main class="main-index">
-      <h1 class="visually-hidden">Курорт Седона</h1>
       <!--интро-->
-      <section class="intro">
-        <h2 class="visually-hidden">Интро для сайта Седона</h2>
-        <img src="" alt="Добро пожаловать">
-        <img src="" alt="Логотип Седоны">
-      </section>
+        <div class="intro">
+            <img src="" alt="Добро пожаловать в прекрасную Седону. «Потому что Гранд Каньон отстой!»">
+        </div>
       <!--Пеимущества-->
       <section class="benefits">
-        <!--Вводной часть для блока преимущества-->
-        <header class="benefits-header">
-          <h1 class="benefits-header-title">Седона — небольшой городок в Аризоне,
-            заслуживающий большего!</h1>
-            <p class="benefits-header-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-        </header>
-        <!--Список с преимуществами-->
-        <ol class="benefits-list">
-          <li class="benefits-item-city">
-             <!--Первое преимущество Настоящий городок-->
-            <div class="city-sedona">
-              <h2 class="city-sedona-title">Настоящий городок</h2>
-              <p class="city-sedona-description number">— №1 —</p>
-              <p class="city-sedona-description">Седона — не аттракцион для туристов, там течёт 
-                своя жизнь</p>
-              <img src="" alt="город Седоны">
-            </div>
-            <!--Преимущества города-->
-            <ul class="city-sedona-list">
-              <li class="city-sedona-item">
-                <h3 class="city-sedona-item-title">Жильё</h3>
-                <p class="city-sedona-item-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-              </li>
-              <li class="city-sedona-item">
-                <h3 class="city-sedona-item-title">Еда</h3>
-                <p class="city-sedona-item-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-              <li class="city-sedona-item">
-                <h3 class="city-sedona-item-title">Сувениры</h3>
-                <p class="city-sedona-item-description">Не только китайского, но и настоящего местного производства!</p>
-              </li>
-            </ul>
-          </li>
-          <!--Второе преимущесво-->
-          <li class="benefits-item">
-            <h2 class="benefits-item-title">Там есть мост дьявола</h2>
-            <p class="benefits-item-description number">— №2 —</p>
-            <p class="benefits-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img src="#" alt="мост дьявола">
-          </li>
-          <!--Третье преимущество-->
-          <li class="benefits-item">
-            <h2 class="benefits-item-title">Небольшая площадь</h2>
-            <p class="benefits-item-description number">— №3 —</p>
-            <p class="benefits-item-description">Все достопримечательности 
-              находятся очень близко</p>
-          </li>
-          <!--Четвертое преимущесвто-->
-          <li class="benefits-item">
-            <h2 class="benefits-item-title">Красивая дорога</h2>
-            <p class="benefits-item-description number">— №4 —</p>
-            <p class="benefits-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <!--Пятое преимущество-->
-          <li class="benefits-item">
-            <h2 class="benefits-item-title">Мало туристов</h2>
-            <p class="benefits-item-description number">— №5 —</p>
-            <p class="benefits-item-description">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-        </ol>
-      </section>
-      <!--Поиск гостиницы-->
-      <section class="search-hotel">
-        <h2 class="search-hotel-title">Заинтересовались?</h2>
-        <p class="search-hotel-description">Укажите предполагаемые даты поездки,
-          и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
-          <a class="btn" href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
-      </section>
-      <!--Подписка на рассылку-->
-      <section class="subscription">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">Только полезная информация и никакого спама,
-          честное бойскаутское!</p>
-          <form action="https://echo.htmlacademy.ru/">
-            <input type="email" name="email" placeholder="Ваш e-mail">
-            <button type="submit">Подписаться</button>
-          </form>
-      </section>
+            <!--Вводной часть для блока преимущества-->
+            <header class="benefits-header">
+            <h1 class="benefits-header-title">Седона — небольшой городок в Аризоне,
+                заслуживающий большего!</h1>
+                <p class="benefits-header-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+            </header>
+            <!--Список с преимуществами-->
+            <ol class="benefits-list">
+            <li class="benefits-item-city">
+                <!--Первое преимущество Настоящий городок-->
+                <div class="city-sedona">
+                <h2 class="city-sedona-title">Настоящий городок</h2>
+                <p class="city-sedona-description">— №1 —</p>
+                <p class="city-sedona-description">Седона — не аттракцион для туристов, там течёт 
+                    своя жизнь</p>
+                <img src="" alt="город Седоны">
+                </div>
+                <!--Преимущества города-->
+                <ul class="city-sedona-list">
+                <li class="city-sedona-item">
+                    <h3 class="city-sedona-item-title">Жильё</h3>
+                    <p class="city-sedona-item-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </li>
+                <li class="city-sedona-item">
+                    <h3 class="city-sedona-item-title">Еда</h3>
+                    <p class="city-sedona-item-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+                <li class="city-sedona-item">
+                    <h3 class="city-sedona-item-title">Сувениры</h3>
+                    <p class="city-sedona-item-description">Не только китайского, но и настоящего местного производства!</p>
+                </li>
+                </ul>
+            </li>
+            <!--Второе преимущесво-->
+            <li class="benefits-item">
+                <h2 class="benefits-item-title">Там есть мост дьявола</h2>
+                <p class="benefits-item-description">— №2 —</p>
+                <p class="benefits-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                <img src="#" alt="мост дьявола">
+            </li>
+            <!--Третье преимущество-->
+            <li class="benefits-item">
+                <h2 class="benefits-item-title">Небольшая площадь</h2>
+                <p class="benefits-item-description">— №3 —</p>
+                <p class="benefits-item-description">Все достопримечательности 
+                находятся очень близко</p>
+            </li>
+            <!--Четвертое преимущесвто-->
+            <li class="benefits-item">
+                <h2 class="benefits-item-title">Красивая дорога</h2>
+                <p class="benefits-item-description">— №4 —</p>
+                <p class="benefits-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <!--Пятое преимущество-->
+            <li class="benefits-item">
+                <h2 class="benefits-item-title">Мало туристов</h2>
+                <p class="benefits-item-description">— №5 —</p>
+                <p class="benefits-item-description">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+            </ol>
+        </section>
+        <!--Поиск гостиницы-->
+        <section class="search-hotel">
+            <h2 class="search-hotel-title">Заинтересовались?</h2>
+            <p class="search-hotel-description">Укажите предполагаемые даты поездки,
+            и мы покажем вам лучшие предложения гостиниц в Седоне
+            </p>
+            <a class="btn" href="#">Поиск гостиницы в Седоне</a>
+        </section>
+        <!--Подписка на рассылку-->
+        <section class="subscription">
+            <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+            <p class="subscription-description">Только полезная информация и никакого спама,
+            честное бойскаутское!</p>
+            <form action="https://echo.htmlacademy.ru/">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Ваш e-mail">
+                <button type="submit">Подписаться</button>
+            </form>
+        </section>
     </main>
     <!--footer-->
     <footer class="page-footer">
