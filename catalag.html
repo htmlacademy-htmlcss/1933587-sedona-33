@@ -15,14 +15,14 @@
         </a>
 
         <ul class="navigation-list" aria-label="Основная навигация">
-          <li class="navigation-item active">
-            <a class="navigation-link">Главная</a>
+          <li class="navigation-item ">
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">Гостиница</a>
+            <a class="navigation-link active">Гостиница</a>
           </li>
         </ul>
         
@@ -50,7 +50,7 @@
         <section class="hotel-selection">
             <header class="hotel-selection-header">
                 <h1 class="hotel-selection-header-title">Гостиницы Седоы </h1>
-                <ul class="breadcrumbs">
+                <ol class="breadcrumbs">
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link"  href="index.html">
                             <span class="visually-hidden">Главная</span>
@@ -59,7 +59,7 @@
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link">Гостиницы</a>
                     </li>
-                </ul>
+                  </ol>
             </header>
             <!--Фильтр гостинец-->
             <form class="filter-hotel" action="https://echo.htmlacademy.ru/">
@@ -100,8 +100,27 @@
                         </li>
                     </ul>
                 </fieldset>
-                <button type="submit">Применить</button>
-                <button type="reset">Сбросить</button>
+                <fieldset class="cost">
+                  <legend class="cost-title">Стоимость, ₽:</legend>
+                  <div class="cost-input">
+                    <label>
+                      <input type="number" min="0" max="9000">
+                      от
+                    </label>
+                    <label>
+                      <input type="number" min="0" max="9000">
+                        до
+                    </label>
+                  </div>
+                  <div class="cost-range">
+                    <input type="range" min="0" max="9000" step="100" value="0" aria-label="min">
+                    <input type="range" min="0" max="9000" step="100" value="9000" aria-label="max">
+                  </div>
+                </fieldset>
+                <div class="buttons">
+                  <button type="submit">Применить</button>
+                  <button type="reset">Сбросить</button>
+                </div>
             </form>
         </section>
 
