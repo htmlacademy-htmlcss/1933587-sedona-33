@@ -1,0 +1,270 @@
+@font-face{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+body{
+    font-family: "PT Sans", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+/* header */
+.page-header{
+    font-size: 20px;
+    line-height: 26px;
+    background-color: #ffffff;
+    font-weight: 700;
+}
+
+.navigation-item{
+    list-style: none;
+}
+
+.navigation-link{
+    color: #000000;   
+    text-decoration: none;
+}
+/* Стиль для кнопок */
+.button{
+    background-color: #756257;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.intro{
+    background: url(../images/background/decoration.svg) no-repeat center bottom/100% auto, 
+    url(../images/background/intro-background.jpg) no-repeat center/100% auto;
+}
+
+.benefits-header{
+    font-size: 22px;
+    line-height: 36px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.title{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.benefits-list, .city-sedona-list, .footer-social-item{
+    list-style: none;
+}
+
+.benefits-list{
+    text-align: center;
+}
+
+.benefits-sedona{
+    background-color: #83B3D3;
+    color: #ffffff;
+}
+
+.city-sedona-item, .benefits-items{
+    background-color: hsl(204 48% 67% / 0.12);
+}
+
+.city-sedona-item:nth-child(2){
+    background-color: inherit;
+}
+
+.benefits-items:nth-child(4){
+    background-color: hsl(204 48% 67% / 0.2);
+}
+
+.search-hotel{
+    background-color: inherit;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.search-hotel a{
+    text-decoration: none;
+}
+
+.subscription{
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+    background:  #615048 url("../images/background/index-background-2.jpg") no-repeat center center/ 100% auto;
+}
+
+input[placeholder]{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.page-footer{
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+.page-footer a{
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Сatalog */
+
+.hotel-selection{
+    color: #ffffff;
+    background: #000000 url("../images/background/catalog-background-1.jpg") no-repeat center center/100% auto;
+    font-size: 18px;
+    line-height: 23px;  
+}
+
+.hotel-selection-header-title{
+    font-size: 60px;
+    line-height: 78px;
+}
+
+.breadcrumbs{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.breadcrumbs a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.breadcrumbs li{
+    list-style: none;
+}
+
+.filter-hotel{
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.filter-hotel-title{
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.button-catalog{
+    background-color: #83B3D3;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.ghost{ 
+    background-color: rgba(117, 190, 218, 0.0);
+    border: none;
+    color: #ffffff;
+}
+
+.sorting-results{
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.results-title{
+    font-size: 30px;
+    line-height: 39px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.form-show-item{
+    list-style: none;
+}
+
+.form-show-link{
+    color: #000000;
+    text-decoration: none;
+}
+
+.search-results-title{
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+}
+
+.rating{
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.results-buttom{
+    background-color: #756257;
+    text-transform: uppercase;
+}
+
+.footer-results{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.download-button{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.paginator-link{
+    color: #FFFFFF;
+     text-decoration: none;
+}
+
+.paginator-item{
+    list-style: none;
+    background-color:  #83B3D3;
+    font-weight: 700;
+}
+
+.acrive-page{
+    color: #000000;
+    background-color: #F2F2F2;
+}
+
+.acrive-page a{
+    color: #000000;
+}
+
+.paginator-button{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.subscription-button{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+
+
+
+
+
+
