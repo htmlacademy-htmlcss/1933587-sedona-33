@@ -40,17 +40,24 @@ body{
     text-decoration: none;
 }
 /* Стиль для кнопок */
-.button{
+ .button{
     background-color: #756257;
-    color: white;
+    color: #FFFFFF;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-}
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: 700; 
+    text-align: center;
+} 
 
 .intro{
-    background: url(../images/background/decoration.svg) no-repeat center bottom/100% auto, 
-    url(../images/background/intro-background.jpg) no-repeat center/100% auto;
+    background-color: #182b32;
+    background-image: url(../images/background/intro-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
 }
 
 .benefits-header{
@@ -58,6 +65,12 @@ body{
     line-height: 36px;
     background-color: #ffffff;
     text-align: center;
+}
+
+.benefits-item-title{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
 }
 
 .title{
@@ -99,16 +112,16 @@ body{
     text-align: center;
 }
 
-.search-hotel a{
-    text-decoration: none;
-}
-
 .subscription{
     font-size: 22px;
     line-height: 26px;
     text-align: center;
     color: #ffffff;
-    background:  #615048 url("../images/background/index-background-2.jpg") no-repeat center center/ 100% auto;
+    background-color: #615048;
+    background-image: url("../images/background/index-background-2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
 }
 
 input[placeholder]{
@@ -132,9 +145,12 @@ input[placeholder]{
 
 .hotel-selection{
     color: #ffffff;
-    background: #000000 url("../images/background/catalog-background-1.jpg") no-repeat center center/100% auto;
+    background-color: #000000;
+    background-image: url("../images/background/catalog-background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     font-size: 18px;
-    line-height: 23px;  
+    line-height: 23px; 
 }
 
 .hotel-selection-header-title{
@@ -169,12 +185,6 @@ input[placeholder]{
 
 .button-catalog{
     background-color: #83B3D3;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 27px;
-    text-transform: uppercase;
-    font-weight: 700;
 }
 
 .ghost{ 
@@ -219,7 +229,6 @@ input[placeholder]{
 
 .results-buttom{
     background-color: #756257;
-    text-transform: uppercase;
 }
 
 .footer-results{
