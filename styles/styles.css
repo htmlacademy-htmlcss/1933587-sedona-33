@@ -25,6 +25,17 @@ img {
   object-fit: contain;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   height: 100%;
 }
@@ -56,7 +67,29 @@ body {
 .navigation-link {
   color: #000000;
   text-decoration: none;
+  padding: 20px 17px;
+  display: block;
 }
+
+.navigation-user .navigation-link {
+  min-width: 42px;
+  min-height: 62px;
+}
+
+.navigation-user .button {
+  padding: 8px 30px;
+  margin-left: 20px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 440px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 /* Стиль для кнопок */
 .button {
   background-color: #756257;
@@ -68,6 +101,8 @@ body {
   text-decoration: none;
   font-weight: 700;
   text-align: center;
+  border-radius: 5px;
+  border: none;
 }
 
 .intro {
@@ -76,6 +111,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  padding: 50px 0 80px;
+}
+
+.logo-intro {
+  display: block;
+  margin: 0 auto;
 }
 
 .benefits-header {
@@ -83,6 +124,7 @@ body {
   line-height: 36px;
   background-color: #ffffff;
   text-align: center;
+  padding: 60px 0 80px;
 }
 
 .benefits-item-title {
@@ -133,6 +175,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  padding: 90px 0 94px;
 }
 
 .subscription {
@@ -144,6 +187,7 @@ body {
   background-image: url("../images/background/index-background-2.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
+  padding: 94px 0;
 }
 
 input[placeholder] {
@@ -173,16 +217,22 @@ input[placeholder] {
   background-size: 100% auto;
   font-size: 18px;
   line-height: 23px;
+  padding: 35px 0 85px;
 }
 
 .hotel-selection-header-title {
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
 }
 
 .breadcrumbs {
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
+  margin-left: 26px;
+  margin-bottom: 40px;
+  padding: 0;
 }
 
 .breadcrumbs a {
@@ -207,6 +257,7 @@ input[placeholder] {
 
 .button-catalog {
   background-color: #83b3d3;
+  padding: 8px 20px;
 }
 
 .ghost {
@@ -220,6 +271,7 @@ input[placeholder] {
   color: #333333;
   font-size: 18px;
   line-height: 23px;
+  padding-top: 50px;
 }
 
 .results-title {
@@ -236,6 +288,9 @@ input[placeholder] {
 .form-show-link {
   color: #000000;
   text-decoration: none;
+  display: block;
+  min-width: 48px;
+  min-height: 48px;
 }
 
 .search-results-title {
@@ -256,22 +311,37 @@ input[placeholder] {
 .footer-results {
   font-size: 20px;
   line-height: 26px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .download-button {
   font-size: 20px;
   line-height: 26px;
+  display: block;
+  margin: auto;
+  padding: 17px 0;
+  width: 620px;
 }
 
 .paginator-link {
   color: #ffffff;
   text-decoration: none;
+  display: block;
+  padding: 15px 20px;
 }
 
 .paginator-item {
   list-style: none;
   background-color: #83b3d3;
   font-weight: 700;
+  border-radius: 5px;
+}
+
+.paginator-item:not(:last-child) {
+  margin-right: 5px;
 }
 
 .acrive-page {
@@ -286,11 +356,18 @@ input[placeholder] {
 .paginator-button {
   font-size: 20px;
   line-height: 26px;
+  border: none;
+  width: 55px;
+  height: 55px;
 }
 
 .subscription-button {
   font-size: 20px;
   line-height: 26px;
+  background-color: #83b3d3;
+  padding: 0 20px;
+  height: 60px;
+  border: none;
 }
 
 
@@ -303,25 +380,17 @@ input[placeholder] {
   display: flex;
 }
 
-.navigation-list {
-  margin: 0;
-  padding: 0;
-  width: 440px;
-}
-
 .navigation-user {
   margin-left: auto;
   width: 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .logo-header {
   display: block;
   margin-right: 30px;
-}
-
-.logo-intro {
-  display: block;
-  margin: 0 auto;
 }
 
 .benefits-list, 
@@ -352,7 +421,7 @@ input[placeholder] {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-
+  padding: 40px 0;
 }
 .main-container {
   width: 1060px;
@@ -361,6 +430,7 @@ input[placeholder] {
 
 .filter-hotel {
   display: flex;
+  align-items: flex-start;
 }
 
 .filter-hotel-list{
@@ -373,11 +443,14 @@ input[placeholder] {
 }
 
 .buttons {
-  margin-left: 80px
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-hotel-group {
   padding: 0;
+  border: none;
 }
 
 .filter-hotel-group-infrastructure {
@@ -386,7 +459,9 @@ input[placeholder] {
 
 .cost {
   margin-left: auto;
+  margin-right: 80px;
   padding: 0;
+  border: none;
 }
 
 .hotel-selection-container {
@@ -399,34 +474,22 @@ input[placeholder] {
 }
 
 .results-title {
+  margin: 0;
   margin-right: auto;
 }
 
 .form-show {
+  margin: 0;
   padding: 0;
-  margin-left: 80px;
-}
-
-.download-button{
-  display: block;
-  margin: 30px auto;
-  width: 620px;
-}
-
-.footer-results {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .paginator {
   display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
-}
-
-.paginator-item {
-  margin: 5px;
-  padding: 10px;
 }
 
 .site-container {
@@ -441,9 +504,91 @@ input[placeholder] {
   flex-grow: 1;
 }
 
-.breadcrumbs{
-  padding: 0;
+.city-container {
+  padding: 97px 0 87px;
+}
+
+.benefits-item .city-sedona-item {
+  padding: 184px 0 80px;
+}
+
+.benefits-list .benefits-items {
+  padding: 98px 0 108px;
+}
+
+.footer-social-list {
+  min-width: 108px;
+  min-height: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 
+.footer-social-link{
+  display: block;
+  min-width: 20px;
+  min-height: 16px;
+}
+
+.filter-hotel-list {
+  list-style: none;
+}
+
+.sorting {
+  margin-right: 80px;
+}
+
+.results-main {
+  padding-top: 50px;
+}
+
+.subscription-title {
+  margin: 0px;
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.subscription-description {
+  margin: 0;
+  padding-top: 30px;
+}
+
+.subscription-form { 
+  padding-top: 46px;
+}
+
+.email {
+  height: 60px;
+  width: 600px;
+}
+
+.subscription-catalog {
+  background-color: #ffffff;
+  background-image: none;
+  color: #000000;
+  padding: 70px 0 140px ;
+}
+
+.download-wrapper {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 30px 0;
+}
+
+.buttons .button-catalog{
+  margin-bottom: 20px;
+}
+
+.button-search {
+  display: block;
+  padding: 15px 0;
+  width: 575px;
+  margin: 0 auto;
+}
 
