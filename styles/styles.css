@@ -592,3 +592,57 @@ input[placeholder] {
   margin: 0 auto;
 }
 
+.search-results-item {
+  list-style: none;
+}
+
+.search-results-list {
+  margin: 0 0 34px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 10px;
+}
+
+.search-results-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+/* Карточка каталога */
+.search-results-title, .search-results-text, .search-results-prise   {
+  margin: 0;
+}
+
+.result-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search-results-margin:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.results-text-wrapper {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 133px 143px;
+}
+
+.rating {
+  align-self: flex-end;
+  margin: 0;
+  width: 160px;
+  text-align: center;
+  padding: 10px 0 10px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.active-button {
+  background-color: #7db54f;
+}
