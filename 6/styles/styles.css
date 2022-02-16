@@ -152,8 +152,7 @@ body {
 
 .benefits-sedona {
   background-color: #83b3d3;
-  color: #ffffff;
-
+  color: #f2f2f2;
   display: flex;
 }
 
@@ -167,7 +166,7 @@ body {
 }
 
 .benefits-items:nth-child(2) {
-  background-color: rgba(7, 7, 7, 0.12);
+  background-color: hsl(204 48% 67% / 0.2);
 }
 
 .search-hotel {
@@ -401,6 +400,7 @@ input[placeholder] {
 
 .benefits-item-width{
   width: 400px;
+  max-width: 400px;
 }
 
 .city-sedona-list {
