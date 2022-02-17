@@ -42,7 +42,7 @@ html {
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   color: #000000;
   font-size: 18px;
   line-height: 21px;
@@ -187,11 +187,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 94px 0;
-}
-
-input[placeholder] {
-  font-size: 18px;
-  line-height: 26px;
 }
 
 .page-footer {
@@ -366,7 +361,7 @@ input[placeholder] {
   background-color: #83b3d3;
   padding: 0 20px;
   height: 60px;
-  border: none;
+  border-radius: 0 5px 5px 0;
 }
 
 
@@ -396,11 +391,6 @@ input[placeholder] {
 .city-sedona-list {
   margin: 0;
   padding: 0;
-}
-
-.benefits-item-width{
-  width: 400px;
-  max-width: 400px;
 }
 
 .city-sedona-list {
@@ -498,22 +488,28 @@ input[placeholder] {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 } 
 
 .main-wrapper{
   flex-grow: 1;
 }
 
-.city-container {
-  padding: 97px 0 87px;
+.benefits-item-width{
+  width: 400px;
 }
 
+.city-container {
+  padding: 97px 10px 87px;
+}
+
+
 .benefits-item .city-sedona-item {
-  padding: 184px 0 80px;
+  padding: 184px 10px 80px;
 }
 
 .benefits-list .benefits-items {
-  padding: 98px 0 108px;
+  padding: 98px 10px 108px;
 }
 
 .footer-social-list {
@@ -561,11 +557,15 @@ input[placeholder] {
 
 .subscription-form { 
   padding-top: 46px;
+  display: flex;
+  justify-content: center;
 }
 
 .email {
   height: 60px;
   width: 600px;
+  padding-left: 22px;
+  line-height: 26px;
 }
 
 .subscription-catalog {
