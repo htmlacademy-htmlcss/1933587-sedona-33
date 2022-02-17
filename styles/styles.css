@@ -646,3 +646,10 @@ body {
 .active-button {
   background-color: #7db54f;
 }
+
+.namber-hotel-list {
+  width: 160px;
+  height: 48px;
+  border: 2px solid #e5e5e5;
+  margin-left: 40px;
+}
