@@ -47,7 +47,6 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-
   margin: 0;
   height: 100%;
 }
@@ -773,7 +772,7 @@ body {
   align-items: center;
 }
 
-.form-show-link.active {
+.form-show-link.activ {
   border: 2px solid #000000;
 }
 
@@ -1057,6 +1056,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 
 
 
