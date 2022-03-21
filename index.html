@@ -69,7 +69,7 @@
                   <p class="benefits-header-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
               </header>
               <!--Список с преимуществами-->
-              <ol class="benefits-list">
+              <ul class="benefits-list">
                 <li class="benefits-item">
                     <!--Первое преимущество Настоящий городок-->
                     <div class="city-sedona benefits-sedona">
@@ -122,7 +122,7 @@
                       <p class="benefits-item-description">Большинство едет в Гранд Каньон и толпится там</p>
                   </li>
                 </ul>
-              </ol>
+              </ul>
           </section>
           <!--Поиск гостиницы-->
             <section class="search-hotel">
@@ -197,6 +197,43 @@
               <span class="visually-hidden">Логотип HTML академии</span>
           </a>
       </footer>
+    </div> 
+    <div class="modal-container modal-active"> <!--Оображает модальное окно-->
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button class="modal-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </div>
+        <form class="modal-search" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="date-wrapper"> <span class="modal-search-text">Дата заезда:</span>
+            <input class="modal-search-date" type="date" name="entry" value="2022-03-21" min="2022-03-21" required> 
+            <span class="valid"></span>
+          </label>
+          <label class="date-wrapper"> Дата выезда:
+            <input class="modal-search-date" type="date" name="departure" value="2022-03-21" min="2022-03-21" required>
+            <span class="valid"></span>
+          </label>
+          <div class="modal-search-age">
+            <label class="number">Взрослые:
+              <input class="age-human" type="number" id="age" name="age">
+              <button type="button" class="age-button age-human-plus"><span class="visually-hidden">Прибавить</span></button>
+              <button type="button" class="age-button age-human-minus"><span class="visually-hidden">Отнять</span></button>
+            </label>
+            <label class="number">Дети:
+              <div class="tooltip-button"></div>
+              <span class="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              <input class="age-human" type="number" name="age">
+              <button type="button" class="age-button age-human-plus"><span class="visually-hidden">Прибавить</span></button>
+              <button type="button" class="age-button age-human-minus"><span class="visually-hidden">Отнять</span></button>
+            </label>
+          </div>
+          <button class="button subscription-button">
+            Найти
+          </button>
+        </form>
+      </div> 
     </div>
   </body>
 </html>
