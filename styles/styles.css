@@ -160,14 +160,16 @@ body {
   background-color: #615048;
 }
 
-.button:active {
-  background-color: rgba(97, 80, 72 0.3);
-  color: rgba(255, 255, 255, 0.3)
-}
-
 .button:focus {
   outline: 3px solid #83B3D3;
 }
+
+.button:active {
+  background-color: rgba(97, 80, 72 0.3);
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
 
 .navigation-user-link:hover .svg {
   fill: #756257;
@@ -491,8 +493,9 @@ body {
   outline: 3px solid #68a2Ca;
 }
 
-.footer-social-link:active .footer-svg {
+.footer-social-link:active  {
   opacity: 0.3;
+  outline: none;
 }
 
 .page-footer a {
@@ -504,13 +507,14 @@ body {
   color: #756257;
 }
 
-.page-footer .telephone:active {
-  opacity: 0.3;
-}
-
 .page-footer .telephone:focus {
   outline:  3px solid #83B3D3;
   border-radius: 10px;
+}
+
+.page-footer .telephone:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .logo-link:hover .page-footer-svg {
@@ -521,6 +525,12 @@ body {
   outline: 3px solid #83B3D3;
   border-radius: 10px;
 }
+
+.logo-link:active {
+  outline: none;
+  opacity: 0.6;
+}
+
 
 
 /* Сatalog */
@@ -835,12 +845,13 @@ body {
   background-color: #68A2CA;
 }
 
-.button-catalog:active {
-  opacity: 0.6;
-}
-
 .button-catalog:focus {
   outline: 3px solid #FFFFFF;
+}
+
+.button-catalog:active {
+  opacity: 0.6;
+  outline: none;
 }
 
 .ghost {
@@ -909,6 +920,14 @@ body {
 .sorting {
   margin-right: 80px;
   border: 2px solid #e6e6e6;
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 4px;
+  padding: 0 127px 0 19px;
+  appearance: none;
+  background-image: url(../images/icons/pointer.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
 }
 
 .sorting:hover {
@@ -1036,10 +1055,6 @@ body {
   background-color: #7db54f;
 }
 
-.active-button:active {
-  background-color: #6C9E42;
-  opacity: 0.6;
-}
 
 .active-button:hover {
   background-color: #6C9E42;
@@ -1049,8 +1064,10 @@ body {
   outline: 3px solid #756257;
 }
 
-.button.button-catalog:focus{
-  outline: 3px solid #756257;
+.active-button:active {
+  background-color: #6C9E42;
+  opacity: 0.6;
+  outline: none;
 }
 
 .search-results-title {
@@ -1065,6 +1082,12 @@ body {
 
 .result-button-wrapper .button {
   padding: 8px 20px;
+}
+
+.result-rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Состояния картинки */
@@ -1129,6 +1152,7 @@ body {
 .paginator-link:active {
   background-color: #68A2CA;
   opacity: 0.3;
+  outline: none;
 }
 
 .paginator-item {
@@ -1179,8 +1203,15 @@ body {
 .namber-hotel-list {
   width: 160px;
   height: 48px;
+  border-radius: 4px;
   border: 2px solid #e5e5e5;
+  padding: 0 21px 0 17px;
+  margin: 0;
   margin-left: 40px;
+  appearance: none;
+  background-image: url(../images/icons/pointer.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
 }
 
 /* Подписка на рассылку (catalog) */
@@ -1346,6 +1377,7 @@ body {
 }
 
 .date-wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 155px 420px;
   grid-template-rows: 50px 29px;
@@ -1355,14 +1387,14 @@ body {
   margin-bottom: 11px;
 }
 
-.valid {
+.valid, .valid-departure {
   grid-column-start: 2;
   grid-column-end: -1;
   display: flex;
   align-items: center;
 }
 
-.modal-search-date:invalid + .valid::after {
+.valid::after {
   content: "Мы не можем отправить вас в прошлое.";
   font-weight: 400;
   font-size: 16px;
@@ -1388,9 +1420,7 @@ body {
  outline: 2px solid #000000;
 }
 
-
-
-.date-wrapper:nth-child(2) .modal-search-date:valid + .valid::after{
+.valid-departure::after{
   content: "На эти даты есть свободные номера. Пока есть. ";
   font-weight: 400;
   font-size: 16px;
@@ -1541,9 +1571,25 @@ body {
   border-radius: 10px;
 }
 
-/* .modal-active {
+.modal-search-calendar {
+  position: absolute;
+  right: 19px;
+  top: 18px;
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../images/icons/calendar.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.modal-active {
   display: none;
-} */
+} 
 
 
 
