@@ -21,7 +21,6 @@
 }
 
 img {
-  max-width: 100%;
   object-fit: contain;
 }
 
@@ -42,7 +41,7 @@ html {
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-color: #e5e5e5;
+  background-color:  #F2F2F2;;
   color: #000000;
   font-size: 18px;
   line-height: 21px;
@@ -58,7 +57,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-} 
+  box-shadow: 0 0 20px -9px #000000;
+}
 
 /* header */
 .header-container {
@@ -101,7 +101,7 @@ body {
   position: relative;
 }
 
-.navigation-link:hover{
+.navigation-link:hover {
   color: #756257;
 }
 
@@ -121,8 +121,8 @@ body {
 
 /* Header дополнительная навигация */
 
-.navigation-user-list{
-  margin:0 20px 0 auto;
+.navigation-user-list {
+  margin: 0 20px 0 auto;
   list-style: none;
   display: flex;
 }
@@ -134,10 +134,10 @@ body {
 }
 
 .link-icons::after {
-  content: '12';
+  content: "12";
   width: 20px;
   height: 20px;
-  background-color: #7DB54F;
+  background-color: #7db54f;
   border-radius: 50%;
   font-weight: normal;
   font-size: 10px;
@@ -161,7 +161,7 @@ body {
 }
 
 .button:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .button:active {
@@ -170,19 +170,17 @@ body {
   outline: none;
 }
 
-
 .navigation-user-link:hover .svg {
   fill: #756257;
 }
 
 .navigation-user-link:active .svg {
-  fill: rgba(117,	98,	87, 0.5);
+  fill: rgba(117, 98, 87, 0.5);
 }
 
 .navigation-user-link:active::after {
   opacity: 0.3;
 }
-
 
 /* Стиль для кнопок */
 
@@ -201,7 +199,7 @@ body {
   cursor: pointer;
 }
 
-.main-wrapper{
+.main-wrapper {
   flex-grow: 1;
 }
 
@@ -214,6 +212,21 @@ body {
   background-size: 100% auto;
   background-position: center;
   padding: 50px 0 80px;
+  position: relative;
+}
+
+.intro::before {
+  content: "";
+  display: block;
+  height: 87px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(../images/background/decoration.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: 0 bottom;
 }
 
 .logo-intro {
@@ -224,11 +237,12 @@ body {
 /* Блок benefits */
 
 .benefits-header {
+  height: 282px;
   font-size: 22px;
   line-height: 36px;
   background-color: #ffffff;
   text-align: center;
-  padding: 60px 0 80px;
+  padding: 63px 0 80px;
 }
 
 .benefits-header .title {
@@ -265,10 +279,21 @@ body {
 .benefits-sedona {
   background-color: #83b3d3;
   color: #f2f2f2;
-  display: flex;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-column: 1/-1;
 }
+ 
+.benefits-list>.benefits-sedona {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+} 
 
-.city-container{
+.benefits-list>.benefits-sedona .city-container {
+order: 1;
+} 
+
+.city-container {
   max-width: 400px;
   padding: 15px 90px;
   display: flex;
@@ -287,9 +312,8 @@ body {
 }
 
 .city-main {
-  flex-grow: 1;
+  display: block;
 }
-
 
 .benefits-list,
 .city-sedona-list,
@@ -299,11 +323,14 @@ body {
 
 .benefits-list {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
 }
 
 /* Преимущества города */
 
 .container-grid {
+  width: 1200px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(384px, auto);
@@ -334,7 +361,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.city-sedona-list  .benefits-item-title {
+.city-sedona-list .benefits-item-title {
   color: #000000;
   margin-bottom: 20px;
 }
@@ -346,21 +373,33 @@ body {
 
 /* 2,3,4 преимущества */
 
+.city-container {
+  height: 384px;
+}
+
 .benefits-items {
   padding: 0 75px;
+  color: #000000;
+}
+
+.benefits-items .benefits-item-title {
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .benefits-items .benefits-item-title {
   margin-bottom: 81px;
 }
 
-.benefits-items:first-child::after {
+.benefits-items:nth-child(3)::after {
   content: "-№3-";
 }
 
-.benefits-items:nth-child(2)::after {
+.benefits-items:nth-child(4)::after {
   content: "-№4-";
-} 
+}
 
 .benefits-items:last-child::after {
   content: "-№5-";
@@ -375,7 +414,7 @@ body {
   background-color: inherit;
 }
 
-.benefits-items:nth-child(2) {
+.benefits-items:nth-child(4) {
   background-color: hsl(204 48% 67% / 0.2);
 }
 
@@ -433,11 +472,11 @@ body {
 }
 
 .subscription-button:hover {
-  background-color: #68a2Ca;
+  background-color: #68a2ca;
 }
 
 .subscription-button:focus {
-  background-color: #68a2Ca;
+  background-color: #68a2ca;
   outline: 3px solid #756257;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -475,7 +514,7 @@ body {
   margin-right: 30px;
 }
 
-.footer-social-link{
+.footer-social-link {
   display: block;
 }
 
@@ -486,14 +525,14 @@ body {
 }
 
 .footer-social-link:hover .footer-svg {
-  fill: #68a2Ca;
+  fill: #68a2ca;
 }
 
 .footer-social-link:focus {
-  outline: 3px solid #68a2Ca;
+  outline: 3px solid #68a2ca;
 }
 
-.footer-social-link:active  {
+.footer-social-link:active {
   opacity: 0.3;
   outline: none;
 }
@@ -508,7 +547,7 @@ body {
 }
 
 .page-footer .telephone:focus {
-  outline:  3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
   border-radius: 10px;
 }
 
@@ -522,7 +561,7 @@ body {
 }
 
 .logo-link:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
   border-radius: 10px;
 }
 
@@ -530,8 +569,6 @@ body {
   outline: none;
   opacity: 0.6;
 }
-
-
 
 /* Сatalog */
 
@@ -585,13 +622,12 @@ body {
 }
 
 .breadcrumbs-link:hover .breadcrumbs-svg {
-   opacity: 0.1;
+  opacity: 0.1;
 }
 
 .breadcrumbs-link:active .breadcrumbs-svg {
   opacity: 0.3;
 }
-
 
 .breadcrumbs-link:hover {
   opacity: 0.4;
@@ -623,12 +659,12 @@ body {
   border-radius: 50%;
 }
 
-.filter-hotel-group:last-child .input-changes-radio:checked + .control-mark::before {
+.input-changes-radio:checked + .control-mark::before {
   content: "";
   position: absolute;
   height: 10px;
   width: 10px;
-  background-color: #3F5E72;
+  background-color: #3f5e72;
   border-radius: 50%;
   top: 5px;
   left: 5px;
@@ -646,14 +682,25 @@ body {
   opacity: 0.6;
 }
 
-.changes:focus .control-mark {
-  outline: 3px solid #83B3D3;;
+.input-changes:focus + .control-mark {
+  outline: 3px solid #83b3d3;
 }
 
-.filter-hotel-group-infrastructure .changes:active .control-mark {
+.input-changes-radio:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.filter-hotel-group-infrastructure .changes:active .control-mark::before {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.input-changes:disabled + .control-mark {
+  background-color: #888a8c;
+}
+
+.input-changes-radio:disabled + .control-mark {
+  background-color: #888a8c;
+}
 
 .hotel-selection-container {
   width: 1056px;
@@ -690,7 +737,7 @@ body {
   margin-bottom: 30px;
 }
 
-.filter-hotel-list{
+.filter-hotel-list {
   margin: 0;
   padding: 0px;
   list-style: none;
@@ -709,6 +756,7 @@ body {
   margin-right: 80px;
   padding: 0;
   border: none;
+  width: 287px;
 }
 
 .cost-title {
@@ -743,11 +791,11 @@ body {
 }
 
 .range-togle:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .range-togle:active {
-  outline: 2px solid #83B3D3;
+  outline: 2px solid #83b3d3;
 }
 
 .togle-min {
@@ -764,10 +812,6 @@ body {
 .cost-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
-}
-
-.cost-range {
-  width: 287px;
 }
 
 .cost-inputs {
@@ -790,7 +834,7 @@ body {
 .cost-label {
   display: grid;
   grid-template-columns: 1fr auto;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   padding-right: 17px;
   align-items: center;
   color: #9c9999;
@@ -798,7 +842,7 @@ body {
 }
 
 .cost-input::placeholder {
-  color: #ffffff
+  color: #ffffff;
 }
 
 .cost-label:not(:last-child) {
@@ -833,7 +877,7 @@ body {
 }
 
 .cost-label:active {
-  background-color:  #756257;;
+  background-color: #756257;
 }
 
 .button-catalog {
@@ -842,11 +886,11 @@ body {
 }
 
 .button-catalog:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .button-catalog:focus {
-  outline: 3px solid #FFFFFF;
+  outline: 3px solid #756257;
 }
 
 .button-catalog:active {
@@ -880,7 +924,7 @@ body {
   flex-direction: column;
 }
 
-.buttons .button-catalog{
+.buttons .button-catalog {
   margin-bottom: 20px;
   padding: 17px 0;
   width: 160px;
@@ -939,7 +983,7 @@ body {
 }
 
 .sorting:active {
-  border: 2px solid #E6E6E6;
+  border: 2px solid #e6e6e6;
   opacity: 0.3;
 }
 
@@ -965,7 +1009,7 @@ body {
   display: block;
   min-width: 48px;
   min-height: 48px;
-  border: 2px solid #E6E6E6;
+  border: 2px solid #e6e6e6;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -992,7 +1036,6 @@ body {
   margin-right: 8px;
 }
 
-
 /* Карточка каталога */
 
 .results-main {
@@ -1013,13 +1056,15 @@ body {
 }
 
 .search-results-wrapper {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.search-results-title, .search-results-text, .search-results-prise   {
+.search-results-title,
+.search-results-text,
+.search-results-prise {
   margin: 0;
 }
 
@@ -1055,9 +1100,8 @@ body {
   background-color: #7db54f;
 }
 
-
 .active-button:hover {
-  background-color: #6C9E42;
+  background-color: #6c9e42;
 }
 
 .active-button:focus {
@@ -1065,7 +1109,7 @@ body {
 }
 
 .active-button:active {
-  background-color: #6C9E42;
+  background-color: #6c9e42;
   opacity: 0.6;
   outline: none;
 }
@@ -1092,16 +1136,21 @@ body {
 
 /* Состояния картинки */
 
+.img-link {
+  border: none;
+}
+
 .img-link:hover .result-img {
   opacity: 0.6;
 }
 
 .img-link:focus .result-img {
-  outline:3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .img-link:active .result-img {
   opacity: 0.3;
+  outline: none;
 }
 
 .download-wrapper {
@@ -1141,7 +1190,7 @@ body {
 }
 
 .paginator-link:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
 .paginator-link:focus {
@@ -1150,7 +1199,7 @@ body {
 }
 
 .paginator-link:active {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
   opacity: 0.3;
   outline: none;
 }
@@ -1229,7 +1278,7 @@ body {
   background-color: #ffffff;
   background-image: none;
   color: #000000;
-  padding: 70px 0 140px ;
+  padding: 70px 0 140px;
 }
 
 .email {
@@ -1241,7 +1290,7 @@ body {
 }
 
 .subscription-catalog .email {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .email:hover {
@@ -1249,11 +1298,11 @@ body {
 }
 
 .email:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .email:invalid {
-  outline: 2px solid #FF5757;;
+  outline: 2px solid #ff5757;
 }
 
 /* header catalog */
@@ -1265,7 +1314,7 @@ body {
   align-items: center;
 }
 
-.benefits-list, 
+.benefits-list,
 .city-sedona-list {
   margin: 0;
   padding: 0;
@@ -1295,8 +1344,8 @@ body {
 .modal-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 59px;
+  align-items: flex-start;
+  margin-bottom: 54px;
 }
 
 .modal-title {
@@ -1305,26 +1354,30 @@ body {
   font-size: 30px;
   line-height: 40px;
   text-transform: uppercase;
+  height: 53px;
+  display: flex;
+  align-items: center;
 }
 
 .modal-button {
   width: 53px;
   height: 53px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .modal-button:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-button:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-button:active {
@@ -1368,7 +1421,7 @@ body {
   height: 50px;
   border: none;
   outline: none;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   border-radius: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -1381,13 +1434,15 @@ body {
   display: grid;
   grid-template-columns: 155px 420px;
   grid-template-rows: 50px 29px;
+  align-items: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
   margin-bottom: 11px;
 }
 
-.valid, .valid-departure {
+.valid,
+.valid-departure {
   grid-column-start: 2;
   grid-column-end: -1;
   display: flex;
@@ -1399,28 +1454,23 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
-  color: #FF5757;
-}
-
-.modal-search-text {
-  display: flex;
-  align-items: center;
+  color: #ff5757;
 }
 
 .modal-search-date:hover {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 
 .modal-search-date:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-search-date:active {
- background-color: #ffffff;
- outline: 2px solid #000000;
+  background-color: #ffffff;
+  outline: 2px solid #000000;
 }
 
-.valid-departure::after{
+.valid-departure::after {
   content: "На эти даты есть свободные номера. Пока есть. ";
   font-weight: 400;
   font-size: 16px;
@@ -1445,7 +1495,7 @@ body {
   height: 50px;
   border: none;
   border-radius: 4px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 0 55px 0 59px;
   font-size: 18px;
   line-height: 40px;
@@ -1510,7 +1560,6 @@ body {
 .number:last-child {
   display: flex;
   align-items: center;
-
 }
 
 .tooltip-button {
@@ -1518,7 +1567,7 @@ body {
   height: 25px;
   border: none;
   border-radius: 50%;
-  background-color: #83B3D3;
+  background-color: #83b3d3;
   background-image: url(../images/icons/exclamatory.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1526,7 +1575,6 @@ body {
   margin-right: 18px;
   margin-left: 10px;
 }
-
 
 .tooltip {
   display: none;
@@ -1545,12 +1593,11 @@ body {
   border-radius: 10px;
 }
 
-
 .tooltip-button:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
 }
 
-.tooltip-button:hover + .tooltip{
+.tooltip-button:hover + .tooltip {
   display: block;
 }
 
@@ -1559,7 +1606,7 @@ body {
 }
 
 .age-button:focus {
-  outline: 3px solid #83B3D3;
+  outline: 3px solid #83b3d3;
 }
 
 .age-button:active {
@@ -1589,22 +1636,4 @@ body {
 
 .modal-active {
   display: none;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
